@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import OrderSummary from '../OrderSummary/OrderSummary';
-
+import PropTypes from 'prop-types';
 const OrderForm = ({tripCost, options})=> (
     <Grid>
       <Row>
@@ -12,4 +12,9 @@ const OrderForm = ({tripCost, options})=> (
     </Grid>
   );
 
-export default OrderForm
+OrderForm.propTypes = {
+    tripCost: PropTypes.string,
+    options: PropTypes.object,
+};
+
+export default OrderForm;
